@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgba(31, 30, 28, 0.979);
+    color: white;
+}
+
+header {
+    font-size: 50px;
+    text-align: center;
+    padding: 20px;
+}
+
+header .titulo a {
+    text-decoration: none;
+    color: white;
+}
+
+main.container {
+    min-height: 70vh;
+    min-width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.all {
+    background: white;
+    max-width: 450px;
+    min-height: 40vh;
+    padding: 2rem;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+}
+
+.all h2 {
+    color: rgba(31, 30, 28, 0.979);
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+.all h2::before {
+    content: ''; /* Sempre tem que ter o content vazio ao usar o before */
+    position: absolute; /* Posição para ficar fixa */
+    height: 4px;
+    width: 25px;
+    bottom: 3px; 
+    left: 0;
+    border-radius: 8px;
+    background: rgba(31, 30, 28, 0.979);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .inputs {
+    position: relative;
+}
+
+form .inputs:first-child {
+    margin-bottom: 1rem;
+}
+
+.inputs .underline::before {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -2px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.2);
+}
+
+.inputs .underline::after {
+    content: '';
+    position: absolute;
+    height: 2px;
+    width: 100%;
+    bottom: -2px;
+    left: 0;
+    background: rgba(31, 30, 28, 0.979);
+    transform: scaleX(0);
+    transition: all .3s ease-in-out;
+    transform-origin: left;
+}
+
+.inputs input:focus ~ .underline::after {
+    transform: scaleX(1);
+}
+
+.inputs input {
+    outline: none;
+    font-size: 0.9rem;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+form button {
+    margin-top: 1.3rem;
+    background: rgba(31, 30, 28, 0.979);
+    color: white;
+    padding: 0.4rem;
+    border-radius: 15px;
+    outline: none;
+    margin-bottom: 1rem;
+}
+
+form button:active {
+    background: rgba(46, 46, 45, 0.979);
+}
+
+form a {
+    color: white;
+    text-decoration: none;
+    margin-bottom: 10px;
+}
+
+form .signup {
+    text-align: center;
+    background: rgba(31, 30, 28, 0.979);
+    width: 100px;
+    margin-left: 83px;
+    font-size: 13px;
+    border-radius: 15px;
+    padding: 0.1rem;
+    height: 22px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: column;
+}
+
+footer span {
+    color: rgba(31, 30, 28, 0.979);
+    text-align: center;
+    font-size: 18px;
+}
+
+.social-fields {
+    padding: 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    width: 100%;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.social-fields a i {
+    margin: 0 0.5rem;
+    width: 15px;
+}
+
+.social-fields a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.979);
+}
+
+.social-fields.twitter {
+    background: linear-gradient(to right, #56a7f2, #468aca);
+}
+
+.social-fields.facebook {
+    background: linear-gradient(to right, #1e3c72, #2a5298);
+}
